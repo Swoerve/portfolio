@@ -65,7 +65,7 @@ header a {
 
 main {}
 
-.headers {
+.header {
     font-weight: bold;
     text-decoration: underline;
     text-decoration-color: var(--primary);
