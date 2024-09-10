@@ -11,6 +11,7 @@
     word-wrap: break-word;
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5rem;
 }
@@ -154,13 +155,15 @@ header a {
     height: 100%;
     width: 100%;
     display: flex;
+    justify-content: space-around;
     flex-direction: row;
     flex-wrap: nowrap;
     margin: 1rem 0;
 }
 
 .item {
-    margin: 0 5px;
+    max-width: 16rem;
+    margin: 0 1rem;
     flex-basis: 100%;
     background-color: rgba(151, 164, 210, 0.1);
     border-radius: 1rem;
