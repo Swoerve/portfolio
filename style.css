@@ -6,6 +6,7 @@
     --accent: #be6a8c;
 }
 
+/* CSS for all sites */
 
 * {
     word-wrap: break-word;
@@ -40,6 +41,10 @@ a {
     .padded {
         width: 50%;
     }
+}
+
+.spacer {
+    height: 4rem;
 }
 
 header {
@@ -115,6 +120,24 @@ header a {
     }
 }
 
+footer {
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+footer p {
+    display: inline;
+}
+
+#hidden {
+    color: var(--background0);
+    text-decoration-color: transparent;
+    display: inline;
+}
+
+/* CSS for index.html */
+
 .selfie {
     margin-top: 1rem;
 
@@ -130,11 +153,10 @@ header a {
     border: .5rem solid transparent;
 }
 
-.spacer {
-    height: 4rem;
+hr {
+    margin: 1rem;
+    border-color: var(--accent);
 }
-
-/* main {} */
 
 .header {
     font-weight: bold;
@@ -142,9 +164,7 @@ header a {
     text-decoration-color: var(--primary);
     text-decoration-thickness: 4px;
     margin: 1rem 0;
-
 }
-
 
 .bio span {
     font-weight: bold;
@@ -156,13 +176,28 @@ header a {
     display: inline;
 }
 
+.hobbies span {
+    font-weight: bold;
+    margin-right: 1rem;
+}
 
+.hobbies span:after {
+    content: " >";
+    color: var(--accent);
+}
 
+.hobbies p {
+    color: var(--text);
+}
+
+/* CSS for uses.html */
 
 #welcome {
+    height: 20vh;
     z-index: -1;
     position: relative;
     overflow: hidden;
+    margin-bottom: 1rem;
 }
 
 #welcome img {
@@ -179,7 +214,13 @@ header a {
     transform: translate(-50%, -50%)
 }
 
-.itemrow {
+@media screen and (min-width: 960px) {
+    #welcome {
+        height: 30vh;
+    }
+}
+
+.usescontainer {
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -189,7 +230,7 @@ header a {
     margin: 0 0;
 }
 
-.item {
+.uses {
     max-width: 20rem;
     margin: 1rem 1rem;
     flex-basis: 100%;
@@ -197,35 +238,49 @@ header a {
     border-radius: 1rem;
 }
 
-.item img {
+.uses img {
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
     width: 100%;
     height: auto;
 }
 
-.itembody {
+.usesbody {
     padding: 5px;
 }
 
 @media screen and (min-width: 950px) {
-    .itemrow {
+    .usescontainer {
         flex-direction: row;
     }
 }
 
-footer {
-    height: 50px;
+/* CSS for works.html */
+
+.works h3 {
+    text-align: center;
+}
+
+.workcontainer {
+    width: 100%;
     display: flex;
+    justify-content: space-around;
     align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 0 0;
 }
 
-footer p {
-    display: inline;
+.work {
+    max-width: 20rem;
+    margin: 1rem 1rem;
+    flex-basis: 100%;
+    text-align: center;
+    border-radius: 1rem;
 }
 
-#hidden {
-    color: var(--background0);
-    text-decoration-color: transparent;
-    display: inline;
+.work img {
+    border-radius: 1rem;
+    width: 100%;
+    height: auto;
 }
