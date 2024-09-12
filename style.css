@@ -21,7 +21,12 @@ body {
     display: grid;
     grid-template-rows: auto 1fr auto;
     background-color: var(--background0);
-    color: var(--text)
+    color: var(--text);
+}
+
+a {
+    color: var(--text);
+    text-decoration-color: var(--accent);
 }
 
 
@@ -47,6 +52,7 @@ header {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    background-color: #0b0d1a5f;
     backdrop-filter: blur(10px);
     width: 100vw;
     height: 4rem;
@@ -154,6 +160,7 @@ header a {
 
 
 #welcome {
+    z-index: -1;
     position: relative;
     overflow: hidden;
 }
@@ -176,14 +183,15 @@ header a {
     width: 100%;
     display: flex;
     justify-content: space-around;
-    flex-direction: row;
+    align-items: center;
+    flex-direction: column;
     flex-wrap: nowrap;
-    margin: 1rem 0;
+    margin: 0 0;
 }
 
 .item {
-    max-width: 16rem;
-    margin: 0 1rem;
+    max-width: 20rem;
+    margin: 1rem 1rem;
     flex-basis: 100%;
     background-color: rgba(151, 164, 210, 0.1);
     border-radius: 1rem;
@@ -200,7 +208,24 @@ header a {
     padding: 5px;
 }
 
+@media screen and (min-width: 950px) {
+    .itemrow {
+        flex-direction: row;
+    }
+}
 
 footer {
     height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+footer p {
+    display: inline;
+}
+
+#hidden {
+    color: var(--background0);
+    text-decoration-color: transparent;
+    display: inline;
 }
